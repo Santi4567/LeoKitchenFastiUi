@@ -1,0 +1,27 @@
+/* src/renderer/src/index.css */
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #ff8a00;
+  --color-ink: #373a3e;
+  --color-cream: #fff2df;
+  --color-night: #25272a;
+  --color-danger: #ff6b5e;
+}
+
+@layer base {
+  body {
+    @apply bg-night text-cream antialiased font-sans;
+  }
+}
+
+@layer components {
+  .login-input {
+    @apply w-full bg-transparent border-b-2 border-cream/40 py-3 text-cream placeholder:text-cream/50 transition-colors;
+    @apply focus:outline-none focus:border-brand;
+  }
+
+  .field-error {
+    @apply text-danger text-xs mt-1;
+  }
+}
